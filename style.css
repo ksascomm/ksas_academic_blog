@@ -1,0 +1,313 @@
+/*
+ Theme Name:   KSAS Academic Blog
+ Theme URI:    https://krieger.jhu.edu
+ Description:  Theme for blog-centric sites. Child of KSAS Cross Divisional.
+ Author:       KSAS Communications
+ Author URI:   https://krieger.jhu.edu
+ Template:     ksas_cross_divisional_18
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  ksasacademicblog
+*/
+
+
+/* Content Styles */
+
+table a, dd a {
+	border: none;
+	border-bottom: .125em solid;
+	border-bottom-color: #d6d6d6;
+	background-color: transparent;
+	border-radius: 0;
+	transition: border-color,background-color,color;
+	transition-duration: 250ms,250ms,250ms;
+	transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+}
+
+.heading-archive {
+	display: flex;
+	justify-content: space-between;
+	margin: .5rem 0;
+}
+
+.heading-archive h2 {
+	font-size: 2rem !important;
+}
+
+.card p {
+	color: #31261d !important;
+}
+
+.card h2 {
+	line-height: 1.25;
+}
+
+.paging {
+	clear: both;
+	padding-left: 25px;
+	width: 100%;
+}
+
+.homepage-news .post-listing h2 {
+	margin-bottom: .75rem;
+}
+
+.wp-sticky {
+	background: inherit !important;
+	padding: inherit !important;
+	position: inherit !important;
+}
+
+.wp-sticky .card {
+	background: #f4f4f4;
+}
+
+.news-thumb {
+	padding-right: inherit !important;
+	padding-bottom: inherit !important;
+}
+
+
+.main-content .accordion-content p, .main-content .entry-content p, .main-content .tabs-panel p, .main-content-full-width .accordion-content p, .main-content-full-width .entry-content p, .main-content-full-width .tabs-panel p {
+	font-size: 20px;
+}
+
+/* Entry Meta & Taxonomies */
+
+.entry-meta {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.125rem;
+	font-family: gentona-semibold,"Helvetica Neue",Roboto,sans-serif;
+	font-weight: 600;
+	max-width: 70ch;
+}
+
+.entry-meta a:hover, .post-taxonomies a:hover, .homepage-news .post-listing h2 a:hover, table a:hover {
+	border-bottom: .125em solid;
+	border-bottom-color: #4a484c;
+}
+
+.post-taxonomies a {
+	font-family: gentona-semibold,"Helvetica Neue",Roboto,sans-serif;
+	font-weight: 600;
+	font-size: .75rem;
+}
+
+.post-taxonomies > span {
+	text-transform: uppercase;
+	margin-bottom: .25rem;
+	font-size: 1rem;
+ }
+
+/* Home Page */
+
+.homepage-news time.updated {
+	text-transform: capitalize !important;
+	color: #31261d !important;
+}
+
+.front-widget-area.callout {
+	margin-top: 1rem;
+	padding-bottom: 0;
+	margin-bottom: -3.75rem;
+	border: 0px;
+	background-color: #f4f4f4;
+}
+
+.front-widget-area .widget.widget_text:nth-of-type(odd), .front-widget-area .widget.widget_text:nth-of-type(even) {
+	box-shadow: none;
+	border: none;
+	background: none;
+	background-color: #f4f4f4;
+	color: #31261d;
+}
+
+.homepage-news .card, .front-widget-area .widget.widget_text:nth-of-type(odd), .front-widget-area .widget.widget_text:nth-of-type(even), .blog .card {
+	--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.widget.ksas_testimonial {
+	border: none !important;
+	background: none !important;
+	background-color: #f4f4f4 !important;
+	color: #31261d !important;
+	--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.homepage-news p.tribe-events-widget-link a {
+	border-bottom: 0 !important;
+}
+
+
+/* Newsletter Section */
+
+.newsletter-section {
+	background:#bfccd9;
+	padding: 2rem 1rem;
+}
+
+.newsletter-section div#frm_field_6_container {
+	padding-top: 10px;
+}
+
+.newsletter-section .frm_submit.frm_half {
+	margin-left: -5px;
+}
+.newsletter-section .frm_style_formidable-style.with_frm_style .frm_submit button {
+	margin-top: 11px !important;
+	box-shadow: none;
+	padding: 11px 10px;
+}
+
+.newsletter-section input#field_yn7t3 {
+	height: 45px;
+	font-size: 20px;
+}
+
+.newsletter-section div#frm_form_2_container label#field_yn7t3_label {
+	display: none;
+}
+
+.newsletter-section .frm_style_formidable-style.with_frm_style.frm_inline_top .frm_submit::before, .newsletter-section .frm_style_formidable-style.with_frm_style .frm_submit.frm_inline_submit::before {
+	display: none;
+}
+
+/* Single Post Styles */
+
+.single-post footer.footer {
+	margin-top: 0 !important;
+}
+
+.single-post .entry-content p {
+	font-size: 20px;
+	/*max-width: 75ch;*/
+}
+
+.single-post .entry-meta {
+	margin: 1rem 0;
+	padding: .75rem 1rem;
+	background-color: #f4f4f4;
+	max-width: 80ch;
+}
+
+.single-post .secondary {
+	padding-left: 2rem;
+}
+
+.single-post button.frm_button_submit.frm_final_submit {
+	padding: 5px 10px;
+}
+
+.single-post .frm_style_formidable-style.with_frm_style.frm_inline_form .frm_submit button {
+	margin-top: 7px !important;
+}
+
+@media screen and (min-width: 40em) {
+	.single-post .main-grid .sidebar {
+		margin-top: 6.5rem;
+	}
+}
+
+
+/* Related Posts */
+.related-posts-section {
+	background:#bfccd9;
+	margin-top: 2rem;
+	padding-bottom: 1rem;
+}
+.related-posts h3 {
+	font-size: 1.9375rem !important;
+	padding: 1rem 0 1rem 1.25rem;
+}
+
+.related-posts .card h5 {
+	line-height: 1.25;
+	font-size: 1.5rem;
+}
+
+.related-posts .card p {
+	font-size: 1rem;
+}
+
+/* Widgets */
+.frm_message {
+	margin-bottom: 1rem;
+}
+
+.widget label#field_i4mf2_label, .widget .frm_description {
+	display: none;
+}
+
+.frm_form_widget h3.widgettitle {
+	margin-bottom: 1rem !important;
+}
+
+.widget div#frm_desc_field_i4mf2 {
+	display: inherit;
+	font-family: gentona-semibold,"Helvetica Neue",Roboto,sans-serif;
+	font-weight: 600;
+	color: #31261d !important;
+	font-size: 1rem;
+	padding: 1rem 0rem;
+}
+
+.frm_style_formidable-style.with_frm_style .form-field {
+	margin-bottom: 0!important;
+}
+
+.widget-area .widget.widget_frm_show_form, .widget-sidebar .widget.widget_frm_show_form{
+	background: #f4f4f4 !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding-bottom: 1rem;
+}
+
+.callout.widget-area {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.callout.widget-area .frm_form_widget h3.widgettitle {
+	padding-top: 2.25rem !important;
+}
+
+.callout.widget-area .close-button, .close-button.medium {
+	top: 0;
+	color: #31261d;
+}
+
+span.contact {
+	line-height: 1.75;
+}
+
+.widget.ksas_testimonial img {
+	max-width: 250px;
+    margin-right: 0;
+	margin: 0 auto;
+	float: inherit;
+}
+
+h5.testimonial-bio-details a {
+	font-size: 1.5rem;
+}
+
+.widget.ksas_testimonial .testimonial-quote, .widget.ksas_testimonial .testimonial-job-details strong {
+	font-size: 1.125rem !important;
+}
+
+.widget.ksas_testimonial .testimonial-quote {
+	line-height: 1.45 !important;
+    letter-spacing: -.2px;
+}
+
+@media print, screen and (max-width: 63.99875em) {
+.widget.ksas_profile img, .widget.ksas_testimonial img {
+    width: inherit !important;
+}
+}
