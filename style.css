@@ -74,6 +74,10 @@ table a, dd a {
 	font-size: 20px;
 }
 
+.wp-block-media-text {
+	margin-bottom: 1rem;
+}
+
 /* Entry Meta & Taxonomies */
 
 .entry-meta {
