@@ -21,23 +21,25 @@ if ( ! function_exists( 'ksasacademic_entry_meta' ) ) :
 					'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a><br>'
 				);
 		}
-		if ( is_single() && is_plugin_active( 'formidable/formidable.php' ) ) {
-			echo '<span class="contact"><i class="fas fa-envelope"></i> <a href="#" data-open="exampleModal1">Contact the author</a></span>';
-		}
+		if ( is_single() ) : ?>
+			<span class="contact"><i class="fas fa-envelope"></i> <a href="mailto:<?php echo get_the_author_meta( 'user_email' );?>?subject=Response to: <?php the_title(); ?>">Contact the author</a></span>
+		<?php endif; ?>
+		<?php
 			echo '</div>';
-			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-			$time_string = sprintf(
-				$time_string,
-				esc_attr( get_the_date( DATE_W3C ) ),
-				esc_html( get_the_date() )
+
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() )
+		);
+		echo '<div class="posted-on">';
+			printf(
+				/* translators: %s: publish date. */
+				esc_html__( '%s', 'ksasacademic' ),
+				$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 			);
-			echo '<div class="posted-on">';
-				printf(
-					/* translators: %s: publish date. */
-					esc_html__( '%s', 'ksasacademic' ),
-					$time_string // phpcs:ignore WordPress.Security.EscapeOutput
-				);
-			echo '</div>';
 		echo '</div>';
+	echo '</div>';
 	}
 endif;
