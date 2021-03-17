@@ -15,7 +15,7 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 				?>
-				<?php get_template_part( 'template-parts/content', 'news-full' ); ?>
+				<?php get_template_part( 'template-parts/content', 'post-full' ); ?>
 			<?php endwhile; ?>
 		</main>
 		<?php get_sidebar(); ?>

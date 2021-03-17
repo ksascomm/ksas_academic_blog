@@ -77,7 +77,7 @@ if ( have_posts() ) :
 				while ( $news_query->have_posts() ) :
 					$news_query->the_post();
 					?>
-					<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
+					<?php get_template_part( 'template-parts/content-post-teaser', get_post_format() ); ?>
 					<?php
 					// Increment the post counter.
 					$postnum++;

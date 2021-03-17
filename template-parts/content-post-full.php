@@ -1,8 +1,8 @@
 <?php
 /**
- * The default template for displaying content
+ * The default template for displaying full post content on single posts.
  *
- * Used for both single and index/archive/search.
+ * Used for single.php
  *
  * @package KSASAcademic
  * @since KSASAcademic 1.0.0

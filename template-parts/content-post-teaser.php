@@ -1,8 +1,8 @@
 <?php
 /**
- * The default template for displaying news content on homepage (meta fields are above the permalink; contains external link class; categories NOT shown)
+ * The default template for displaying posts on front, blog, and archive pages.
  *
- * Used for both single and index/archive/search.
+ * Used for front-blog.php, index.php, author.php, and category.php
  *
  * @package KSASAcademic
  * @since KSASAcademic 1.0.0
@@ -39,7 +39,7 @@
 				<?php ksasacademic_entry_meta(); ?>
 		</header>
 		<div class="entry-content">	
-				<?php the_excerpt(); ?>
+			<?php the_excerpt(); ?>
 		</div>	
 		</div>
 	</div>

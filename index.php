@@ -52,7 +52,7 @@ $theme_option = flagship_sub_get_global_options(); ?>
 					endif;
 					wp_reset_postdata();
 					?>
-					<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
+					<?php get_template_part( 'template-parts/content-post-teaser', get_post_format() ); ?>
 					<?php $post_count++; ?>
 				<?php endwhile; ?>
 				<?php else : ?>
