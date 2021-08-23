@@ -71,7 +71,7 @@ table a, dd a {
 
 
 .main-content .accordion-content p, .main-content .entry-content p, .main-content .tabs-panel p, .main-content-full-width .accordion-content p, .main-content-full-width .entry-content p, .main-content-full-width .tabs-panel p {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .wp-block-media-text {
@@ -170,7 +170,7 @@ table a, dd a {
 
 .newsletter-section input#field_yn7t3 {
 	height: 45px;
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .newsletter-section div#frm_form_2_container label#field_yn7t3_label {
@@ -188,7 +188,7 @@ table a, dd a {
 }
 
 .single-post .entry-content p {
-	font-size: 20px;
+	font-size: 1.25rem;
 	/*max-width: 75ch;*/
 }
 
