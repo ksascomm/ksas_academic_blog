@@ -33,14 +33,14 @@ function my_theme_enqueue_styles() {
 	wp_enqueue_script( 'aos-init', get_stylesheet_directory_uri() . '/js/aos-init.js', array(), '1.0.0', true );
 }
 /** Return entry meta information for posts */
-require_once( 'library/entry-meta.php' );
-require_once( 'library/categories.php' );
+require_once 'library/entry-meta.php';
+require_once 'library/categories.php';
 
 /** Return related posts by Category */
-require_once( 'library/related-posts.php' );
+require_once 'library/related-posts.php';
 
 /** Custom Breadcrumb menus */
-require_once( 'library/breadcrumbs.php' );
+require_once 'library/breadcrumbs.php';
 
 add_filter(
 	'excerpt_length',
@@ -48,3 +48,37 @@ add_filter(
 		return 30;
 	}
 );
+
+/** Remove Disable/Clean Inline Styles from Parent Theme */
+add_action( 'after_setup_theme', 'remove_parent_post_cleaner' );
+function remove_parent_post_cleaner() {
+	remove_filter( 'the_content', 'clean_post_content', 10, 2 );
+}
+
+/** Disable/Clean Inline Styles Specifically on Child Theme */
+function child_theme_clean_post_content( $content ) {
+	// Remove inline styling.
+	// $content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );
+	$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
+	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
+	$content = preg_replace( '/color\:.+?;/i', '', $content );
+
+	// Remove font tag.
+	$content = preg_replace( '/<font[^>]+>/', '', $content );
+
+	// Remove empty tags.
+	$post_cleaners = array(
+		'<p></p>'             => '',
+		'<p> </p>'            => '',
+		'<p>&nbsp;</p>'       => '',
+		'<span></span>'       => '',
+		'<span> </span>'      => '',
+		'<span>&nbsp;</span>' => '',
+		'<font>'              => '',
+		'</font>'             => '',
+	);
+	$content       = strtr( $content, $post_cleaners );
+
+	return $content;
+}
+add_filter( 'the_content', 'child_theme_clean_post_content', 10, 2 );
