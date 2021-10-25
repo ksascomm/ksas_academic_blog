@@ -12,11 +12,10 @@ if ( ! function_exists( 'ksasacademic_entry_meta' ) ) :
 		if ( ! is_author() ) :
 			// Hide 'By...' field on author archive page.
 			echo '<div class="posted-by">';
-				// PublishPress Authors plugin conditional.
-			if ( is_plugin_active( 'publishpress-authors-pro/publishpress-authors-pro.php' ) ) {
-				echo '<div class="byline author">' . __( 'By', 'ksasacademic' );
-				do_action( 'pp_multiple_authors_show_author_box', false, 'inline', false, true );
-				echo '</div>';
+				// CEASE PublishPress Authors plugin conditional.
+				// ADD Co-Authors Plus function conditional.
+			if ( function_exists( 'coauthors_posts_links' ) ) {
+				coauthors_posts_links();
 			} else {
 				// Revert to core functions if no plugin.
 				printf(
@@ -28,7 +27,7 @@ if ( ! function_exists( 'ksasacademic_entry_meta' ) ) :
 			if ( is_single() ) :
 				// Show email address on single post.
 				?>
-				<span class="contact"><i class="fas fa-envelope"></i> <a href="mailto:<?php echo get_the_author_meta( 'user_email' );?>?subject=Response to: <?php the_title(); ?>">Contact the author</a></span>
+				<span class="contact"><br><i class="fas fa-envelope"></i> <a href="mailto:<?php echo esc_html( get_the_author_meta( 'user_email' ) ); ?>?subject=Response to: <?php the_title(); ?>">Contact the author</a></span>
 			<?php endif; ?>
 			<?php
 			echo '</div>';
