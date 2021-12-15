@@ -1,11 +1,11 @@
 /*
- Theme Name:   KSAS Academic Blog
+ Theme Name:   KSAS Academic Blog 2.0
  Theme URI:    https://krieger.jhu.edu
  Description:  Theme for blog-centric sites. Child of KSAS Cross Divisional.
  Author:       KSAS Communications
  Author URI:   https://krieger.jhu.edu
- Template:     ksas_cross_divisional_18
- Version:      1.1.0
+ Template:     ksas_academic_department
+ Version:      2.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -78,6 +78,11 @@ table a, dd a {
 	margin-bottom: 1rem;
 }
 
+.footer-container #menu-footer-links {
+	padding-left: 0rem !important;
+	justify-content: center;
+}
+
 /* Entry Meta & Taxonomies */
 
 .entry-meta {
@@ -107,6 +112,19 @@ table a, dd a {
  }
 
 /* Home Page */
+
+.home-intro.blue {
+    background: #c3dcf5;
+}
+
+.home-intro p:first-of-type {
+    padding-top: 1.25rem;
+}
+.home-intro p {
+    font-family: gentona-light,"Helvetica Neue",Roboto,sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
 
 .homepage-news time.updated {
 	text-transform: capitalize !important;
@@ -292,9 +310,10 @@ span.contact {
 
 .widget.ksas_testimonial img {
 	max-width: 250px;
-    margin-right: 0;
+    margin-right: auto !important;
 	margin: 0 auto;
-	float: inherit;
+	float: inherit !important;
+	width: inherit !important;
 }
 
 h5.testimonial-bio-details a {
@@ -306,12 +325,24 @@ h5.testimonial-bio-details a {
 }
 
 .widget.ksas_testimonial .testimonial-quote {
-	line-height: 1.45 !important;
+	line-height: 1.5;
     letter-spacing: -.2px;
+}
+
+.widget.ksas_testimonial .widget_title {
+	display: none;
 }
 
 @media print, screen and (max-width: 63.99875em) {
 .widget.ksas_profile img, .widget.ksas_testimonial img {
     width: inherit !important;
 }
+}
+
+/* Testimonials */
+.testimonial-container .testimonial-avatar .testimonial-image {
+    margin: auto;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
 }

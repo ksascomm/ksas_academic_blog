@@ -82,18 +82,18 @@ if ( have_posts() ) :
 					// Increment the post counter.
 					$postnum++;
 					// if sidebar is active and post counter = 2 show widget.
-					if ( is_active_sidebar( 'homepage1' ) && $postnum == 2 ) {
+					if ( is_active_sidebar( 'homepage-featured-sb' ) && $postnum == 2 ) {
 						?>
 						<div class="front-widget-area cell" data-aos="fade-in" data-aos-once="true">
-							<?php dynamic_sidebar( 'homepage1' ); ?>
+							<?php dynamic_sidebar( 'homepage-featured-sb' ); ?>
 						</div>
 					<?php } ?>
 					<?php
 					// if sidebar is active and post counter = 4 show widget.
-					if ( is_active_sidebar( 'homepage2' ) && $postnum == 4 ) {
+					if ( is_active_sidebar( 'homepage-sb' ) && $postnum == 4 ) {
 						?>
 						<div class="front-widget-area cell" data-aos="fade-in" data-aos-once="true">
-							<?php dynamic_sidebar( 'homepage2' ); ?>
+							<?php dynamic_sidebar( 'homepage-sb' ); ?>
 						</div>
 						<?php } ?>
 				<?php endwhile; ?>

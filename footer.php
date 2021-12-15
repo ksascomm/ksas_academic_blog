@@ -32,7 +32,7 @@
 			</div>
 			<div class="small-12 cell centered">
 				<a href="https://www.jhu.edu/">
-					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
+					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu.horizontal.white.png" alt="Johns Hopkins University">
 				</a>
 			</div>
 		</div>
@@ -41,12 +41,12 @@
 		<div class="grid-x grid-padding-x hide-for-print">
 			<div class="small-12 medium-4 cell">
 				<a href="https://www.jhu.edu/">
-					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
+					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu.horizontal.white.png" alt="Johns Hopkins University">
 				</a>
 			</div>
 			<div class="small-12 medium-4 cell">
 				<div class="footer-links">
-					<ul class="menu" role="menu">
+					<ul class="menu" role="menu" id="menu-footer-links">
 						<li role="menuitem"><a href="https://accessibility.jhu.edu/" target="_blank">Accessibility</a></li>	
 						<li role="menuitem"><a href="https://jobs.jhu.edu/" target="_blank">Careers</a></li>	
 						<li role="menuitem"><a href="https://it.johnshopkins.edu/policies/privacystatement" target="_blank">Privacy Statement</a></li>

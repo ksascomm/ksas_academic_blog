@@ -14,9 +14,6 @@ $theme_option = flagship_sub_get_global_options(); ?>
 <div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content-full-width ">
-			<div class="secondary">
-				<?php ksasacademic_breadcrumb(); ?>
-			</div>				
 			<h1 class="page-title">
 			<?php
 				global $author;
